@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Color
 extension UIColor {
     // MARK: initialize with RGBA
     convenience init(withRGBA value: (CGFloat, CGFloat, CGFloat, CGFloat)) {
@@ -40,11 +41,6 @@ extension UIColor {
                   alpha: 1)
     }
     
-    // MARK: initialize with name
-    convenience init?(_ name: String) {
-        self.init(named: name)
-    }
-    
     // MARK: random UIColor
     static var randomColor: UIColor {
         let randomColor = UIColor(red:   CGFloat.random(in: 0...255) / 255,
@@ -55,7 +51,8 @@ extension UIColor {
     }
     
     // MARK: random low saturation UIColor
-    static func randomLSColor(_ tolerence: (UInt, UInt) = (60, 61)) -> UIColor {
+    static func randomLSColor(_ tolerence: (UInt, UInt) = (20, 100),
+                              _ ratio: (Float, Float) = (0.6, 1)) -> UIColor {
         guard tolerence.1 <= 255 else { fatalError("tolerence should be in the range of 0...255") }
         
         func get3RandomNumber(t: (UInt, UInt)) -> [Int] {
@@ -63,19 +60,30 @@ extension UIColor {
             let g = Int.random(in: 0...255)
             let b = Int.random(in: 0...255)
             let numbers = [r, g, b]
-            if (numbers.max()! - numbers.min()!) > t.1 || (numbers.max()! - numbers.min()!) < t.0 {
-                return get3RandomNumber(t: t)
-            } else {
+            let offset = numbers.max()! - numbers.min()!
+            if offset < t.1
+                && offset > t.0
+                && (r + g + b) > Int(765 * ratio.0)
+                && (r + g + b) < Int(765 * ratio.1) {
                 return numbers
+            } else {
+                return get3RandomNumber(t: t)
             }
         }
         
         let colors: [CGFloat] = get3RandomNumber(t: tolerence).map { (c) -> CGFloat in return CGFloat(c) }
-        print(colors)
         return UIColor(red:   colors[0] / 255.0,
                        green: colors[1] / 255.0,
                        blue:  colors[2] / 255.0,
                        alpha: 1)
+    }
+}
+
+// MARK: - Control
+extension UIColor {
+    // MARK: initialize with name
+    convenience init?(_ name: String) {
+        self.init(named: name)
     }
     
     // MARK: resolved CGColor

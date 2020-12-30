@@ -58,10 +58,10 @@
 		83659834259B2619005F9981 /* Mimoku_Example */ = {
 			isa = PBXGroup;
 			children = (
+				8365984A259B2645005F9981 /* Mimoku */,
 				83659835259B2619005F9981 /* AppDelegate.swift */,
 				83659837259B2619005F9981 /* SceneDelegate.swift */,
 				83659839259B2619005F9981 /* ViewController.swift */,
-				8365984A259B2645005F9981 /* Mimoku */,
 				8365983B259B2619005F9981 /* Main.storyboard */,
 				8365983E259B261A005F9981 /* Assets.xcassets */,
 				83659840259B261A005F9981 /* LaunchScreen.storyboard */,

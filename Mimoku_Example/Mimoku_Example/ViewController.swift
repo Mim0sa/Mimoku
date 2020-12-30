@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     }
     
     func createGrid() {
+        print(Date().timeIntervalSince1970)
         let edge = view.frame.width / 30
         for i in 0...29 {
             for j in 0...Int(view.frame.height / edge) + 1 {
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
                 view.addSubview(v)
             }
         }
-        
+        print(Date().timeIntervalSince1970)
     }
 
 
