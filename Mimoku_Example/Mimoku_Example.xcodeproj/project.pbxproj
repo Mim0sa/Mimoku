@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8342D1FD25ABFFBB008A6ACC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342D1FC25ABFFBB008A6ACC /* UIImage+Extension.swift */; };
 		83659836259B2619005F9981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83659835259B2619005F9981 /* AppDelegate.swift */; };
 		83659838259B2619005F9981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83659837259B2619005F9981 /* SceneDelegate.swift */; };
 		8365983A259B2619005F9981 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83659839259B2619005F9981 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8342D1FC25ABFFBB008A6ACC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		83659832259B2619005F9981 /* Mimoku_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimoku_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83659835259B2619005F9981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83659837259B2619005F9981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				83659851259B26D4005F9981 /* UIColor+Extension.swift */,
+				8342D1FC25ABFFBB008A6ACC /* UIImage+Extension.swift */,
 			);
 			path = Mimoku;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				8365983A259B2619005F9981 /* ViewController.swift in Sources */,
 				83659836259B2619005F9981 /* AppDelegate.swift in Sources */,
+				8342D1FD25ABFFBB008A6ACC /* UIImage+Extension.swift in Sources */,
 				83659838259B2619005F9981 /* SceneDelegate.swift in Sources */,
 				83659852259B26D4005F9981 /* UIColor+Extension.swift in Sources */,
 			);
