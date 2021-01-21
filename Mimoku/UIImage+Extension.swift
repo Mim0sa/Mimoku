@@ -29,14 +29,12 @@ extension UIImage {
         return UIImage(cgImage: outImage)
     }
     
-    static let defaultMinV4 = CIVector(x: 0.2, y: 0.2, z: 0.2, w: 0.2)
-    static let defaultMaxV4 = CIVector(x: 0.8, y: 0.8, z: 0.8, w: 0.8)
     static let buildInFilterEffect: [(String, [String : Any?])] = [
-        ("CIPhotoEffectChrome", [:]), ("CIColorClamp", ["inputMaxComponents" : defaultMaxV4]),
-        ("CILinearToSRGBToneCurve", [:]), ("CISRGBToneCurveToLinear", [:]), ("CISepiaTone", [:]),
+        ("CIPhotoEffectChrome", [:]), ("CIColorClamp", ["inputMaxComponents" : CIVector(x: 0.8, y: 0.8, z: 0.8, w: 0.8)]),
+        ("CILinearToSRGBToneCurve", [:]), ("CISRGBToneCurveToLinear", [:]), ("CISepiaTone", [:]), ("CIEdges", [:]),
         ("CIPhotoEffectChrome", [:]), ("CIPhotoEffectFade", [:]), ("CIPhotoEffectInstant", [:]), ("CIPhotoEffectMono", [:]),
         ("CIPhotoEffectNoir", [:]), ("CIPhotoEffectProcess", [:]), ("CIPhotoEffectTonal", [:]), ("CIPhotoEffectTransfer", [:]),
         ("CIPointillize", [:]), ("CIPixellate", ["inputScale" : 14]), ("CIHexagonalPixellate", ["inputScale" : 16]),
-        ("CILineOverlay", [:]), ("CIGloom", [:]), ("CIEdges", [:]), ("CICrystallize", [:]),
+        ("CILineOverlay", [:]), ("CIGloom", [:]), ("CICrystallize", [:]),
     ]
 }
