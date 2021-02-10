@@ -15,6 +15,7 @@
 		8365983D259B2619005F9981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8365983B259B2619005F9981 /* Main.storyboard */; };
 		8365983F259B261A005F9981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8365983E259B261A005F9981 /* Assets.xcassets */; };
 		83659842259B261A005F9981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83659840259B261A005F9981 /* LaunchScreen.storyboard */; };
+		83CE1BA625D3B24200E78F1A /* GCD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE1BA525D3B24200E78F1A /* GCD+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8365983E259B261A005F9981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83659841259B261A005F9981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83659843259B261A005F9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CE1BA525D3B24200E78F1A /* GCD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GCD+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			children = (
 				8322634C25B974F500133296 /* UIColor+Extension.swift */,
 				8322634D25B974F500133296 /* UIImage+Extension.swift */,
+				83CE1BA525D3B24200E78F1A /* GCD+Extension.swift */,
 			);
 			name = Mimoku;
 			path = ../../Mimoku;
@@ -157,6 +160,7 @@
 				83659836259B2619005F9981 /* AppDelegate.swift in Sources */,
 				8322634F25B974F500133296 /* UIImage+Extension.swift in Sources */,
 				83659838259B2619005F9981 /* SceneDelegate.swift in Sources */,
+				83CE1BA625D3B24200E78F1A /* GCD+Extension.swift in Sources */,
 				8322634E25B974F500133296 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,11 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AsyncTaskDispatchDelegate {
+    func asyncTaskDidFinished() {
+        print("Finished!")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AsyncTaskDispatch.shared.delegate = self
+        AsyncTaskDispatch.shared.addAsyncTask {
+            sleep(10)
+        }
     }
     
     func createGrid() {
