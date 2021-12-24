@@ -6,9 +6,8 @@
 
 import UIKit
 
-// MARK: - Color
 extension UIColor {
-    // MARK: initialize with RGBA
+    /// initialize with RGBA
     convenience init(withRGBA value: (CGFloat, CGFloat, CGFloat, CGFloat)) {
         self.init(red:   value.0 / 255,
                   green: value.1 / 255,
@@ -16,7 +15,7 @@ extension UIColor {
                   alpha: value.3)
     }
     
-    // MARK: initialize with RGB
+    /// initialize with RGB
     convenience init(withRGB value: (CGFloat, CGFloat, CGFloat)) {
         self.init(red:   value.0 / 255,
                   green: value.1 / 255,
@@ -24,15 +23,7 @@ extension UIColor {
                   alpha: 1)
     }
     
-    // MARK: initialize with hex & alpha
-    convenience init(withHex value: (hex: UInt, alpha: CGFloat)) {
-        self.init(red:   CGFloat((value.hex & 0xFF0000) >> 16) / 255.0,
-                  green: CGFloat((value.hex & 0xFF0000) >> 16) / 255.0,
-                  blue:  CGFloat((value.hex & 0xFF0000) >> 16) / 255.0,
-                  alpha: value.alpha)
-    }
-    
-    // MARK: initialize with hex
+    /// initialize with hex
     convenience init(withHex hex: UInt) {
         self.init(red:   CGFloat((hex & 0xFF0000) >> 16) / 255.0,
                   green: CGFloat((hex & 0xFF00) >> 8)    / 255.0,
@@ -40,18 +31,12 @@ extension UIColor {
                   alpha: 1)
     }
     
-    // MARK: append Alpha
+    /// append Alpha
     func alpha(_ a: CGFloat) -> UIColor {
-        var components = cgColor.components ?? [0, 0, 0]
-        if components.count != 4 { components = [0, 0, 0, 0] }
-        let color = UIColor(red:   components[0],
-                            green: components[1],
-                            blue:  components[2],
-                            alpha: a)
-        return color
+        return withAlphaComponent(a)
     }
     
-    // MARK: random UIColor
+    /// random UIColor
     static var randomColor: UIColor {
         let randomColor = UIColor(red:   CGFloat.random(in: 0...255) / 255,
                                   green: CGFloat.random(in: 0...255) / 255,
@@ -60,7 +45,8 @@ extension UIColor {
         return randomColor
     }
     
-    // MARK: random low saturation UIColor
+    /// random low saturation UIColor
+    /// may need rewrite with while loop, it's so stupid now.
     static func randomLSColor(_ tolerence: (UInt, UInt) = (20, 100),
                               _ ratio: (Float, Float) = (0.6, 1)) -> UIColor {
         guard tolerence.1 <= 255 else { fatalError("tolerence should be in the range of 0...255") }
@@ -89,14 +75,14 @@ extension UIColor {
     }
 }
 
-// MARK: - Control
+/// Control
 extension UIColor {
-    // MARK: initialize with name
+    /// initialize with name
     convenience init?(_ name: String) {
         self.init(named: name)
     }
     
-    // MARK: resolved CGColor
+    /// resolved CGColor
     func cgColor(with traitCollection: UITraitCollection) -> CGColor {
         return resolvedColor(with: traitCollection).cgColor
     }
