@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8322634E25B974F500133296 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322634C25B974F500133296 /* UIColor+Extension.swift */; };
-		8322634F25B974F500133296 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322634D25B974F500133296 /* UIImage+Extension.swift */; };
+		8358A39C2775C0A60039C22B /* MMKFPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A3972775C0A60039C22B /* MMKFPSLabel.swift */; };
+		8358A39D2775C0A60039C22B /* Mimoku+CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A3982775C0A60039C22B /* Mimoku+CGRect.swift */; };
+		8358A39E2775C0A60039C22B /* Mimoku+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A3992775C0A60039C22B /* Mimoku+UIColor.swift */; };
+		8358A39F2775C0A60039C22B /* Mimoku+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A39A2775C0A60039C22B /* Mimoku+Window.swift */; };
+		8358A3A02775C0A60039C22B /* Mimoku+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A39B2775C0A60039C22B /* Mimoku+UIImage.swift */; };
 		83659836259B2619005F9981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83659835259B2619005F9981 /* AppDelegate.swift */; };
 		83659838259B2619005F9981 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83659837259B2619005F9981 /* SceneDelegate.swift */; };
 		8365983A259B2619005F9981 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83659839259B2619005F9981 /* ViewController.swift */; };
 		8365983D259B2619005F9981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8365983B259B2619005F9981 /* Main.storyboard */; };
 		8365983F259B261A005F9981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8365983E259B261A005F9981 /* Assets.xcassets */; };
 		83659842259B261A005F9981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83659840259B261A005F9981 /* LaunchScreen.storyboard */; };
-		83CE1BA625D3B24200E78F1A /* GCD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE1BA525D3B24200E78F1A /* GCD+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8322634C25B974F500133296 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		8322634D25B974F500133296 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8358A3972775C0A60039C22B /* MMKFPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMKFPSLabel.swift; sourceTree = "<group>"; };
+		8358A3982775C0A60039C22B /* Mimoku+CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mimoku+CGRect.swift"; sourceTree = "<group>"; };
+		8358A3992775C0A60039C22B /* Mimoku+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mimoku+UIColor.swift"; sourceTree = "<group>"; };
+		8358A39A2775C0A60039C22B /* Mimoku+Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mimoku+Window.swift"; sourceTree = "<group>"; };
+		8358A39B2775C0A60039C22B /* Mimoku+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mimoku+UIImage.swift"; sourceTree = "<group>"; };
 		83659832259B2619005F9981 /* Mimoku_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimoku_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83659835259B2619005F9981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83659837259B2619005F9981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +34,6 @@
 		8365983E259B261A005F9981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83659841259B261A005F9981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83659843259B261A005F9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83CE1BA525D3B24200E78F1A /* GCD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GCD+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8322634B25B974F500133296 /* Mimoku */ = {
+		8358A3962775C0A60039C22B /* Mimoku */ = {
 			isa = PBXGroup;
 			children = (
-				8322634C25B974F500133296 /* UIColor+Extension.swift */,
-				8322634D25B974F500133296 /* UIImage+Extension.swift */,
-				83CE1BA525D3B24200E78F1A /* GCD+Extension.swift */,
+				8358A3972775C0A60039C22B /* MMKFPSLabel.swift */,
+				8358A3982775C0A60039C22B /* Mimoku+CGRect.swift */,
+				8358A3992775C0A60039C22B /* Mimoku+UIColor.swift */,
+				8358A39A2775C0A60039C22B /* Mimoku+Window.swift */,
+				8358A39B2775C0A60039C22B /* Mimoku+UIImage.swift */,
 			);
 			name = Mimoku;
 			path = ../../Mimoku;
@@ -73,7 +79,7 @@
 		83659834259B2619005F9981 /* Mimoku_Example */ = {
 			isa = PBXGroup;
 			children = (
-				8322634B25B974F500133296 /* Mimoku */,
+				8358A3962775C0A60039C22B /* Mimoku */,
 				83659835259B2619005F9981 /* AppDelegate.swift */,
 				83659837259B2619005F9981 /* SceneDelegate.swift */,
 				83659839259B2619005F9981 /* ViewController.swift */,
@@ -156,12 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8358A39F2775C0A60039C22B /* Mimoku+Window.swift in Sources */,
+				8358A39D2775C0A60039C22B /* Mimoku+CGRect.swift in Sources */,
 				8365983A259B2619005F9981 /* ViewController.swift in Sources */,
 				83659836259B2619005F9981 /* AppDelegate.swift in Sources */,
-				8322634F25B974F500133296 /* UIImage+Extension.swift in Sources */,
+				8358A39C2775C0A60039C22B /* MMKFPSLabel.swift in Sources */,
+				8358A3A02775C0A60039C22B /* Mimoku+UIImage.swift in Sources */,
 				83659838259B2619005F9981 /* SceneDelegate.swift in Sources */,
-				83CE1BA625D3B24200E78F1A /* GCD+Extension.swift in Sources */,
-				8322634E25B974F500133296 /* UIColor+Extension.swift in Sources */,
+				8358A39E2775C0A60039C22B /* Mimoku+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

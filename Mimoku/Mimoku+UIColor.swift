@@ -1,8 +1,7 @@
 //
-//  UIColor+Extension.swift
-//  Mimoku_Example
+//  Mimoku+UIColor.swift
 //
-//  Created by Mimosa on 2020/12/29.
+//  Created by Mimosa.
 //
 
 import UIKit
@@ -39,6 +38,17 @@ extension UIColor {
                   green: CGFloat((hex & 0xFF00) >> 8)    / 255.0,
                   blue:  CGFloat(hex & 0xFF)             / 255.0,
                   alpha: 1)
+    }
+    
+    // MARK: append Alpha
+    func alpha(_ a: CGFloat) -> UIColor {
+        var components = cgColor.components ?? [0, 0, 0]
+        if components.count != 4 { components = [0, 0, 0, 0] }
+        let color = UIColor(red:   components[0],
+                            green: components[1],
+                            blue:  components[2],
+                            alpha: a)
+        return color
     }
     
     // MARK: random UIColor
