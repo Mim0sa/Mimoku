@@ -7,36 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController, AsyncTaskDispatchDelegate {
-    func asyncTaskDidFinished() {
-        print("Finished!")
-    }
+class ViewController: UIViewController, MMKSliderDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AsyncTaskDispatch.shared.delegate = self
-        AsyncTaskDispatch.shared.addAsyncTask {
-            sleep(10)
-        }
+        let slider = MMKSlider()
+        slider.delegate = self
+        slider.frame.size = CGSize(width: 200, height: 30)
+        slider.center = view.center
+        view.addSubview(slider)
     }
     
-    func createGrid() {
-        print(Date().timeIntervalSince1970)
-        let edge = view.frame.width / 30
-        for i in 0...29 {
-            for j in 0...Int(view.frame.height / edge) + 1 {
-                let v = UIView()
-                v.backgroundColor = UIColor.randomLSColor()
-                v.frame = CGRect(x: CGFloat(i) * edge,
-                                 y: CGFloat(j) * edge,
-                                 width: edge, height: edge)
-                view.addSubview(v)
-            }
-        }
-        print(Date().timeIntervalSince1970)
+    func slider(_ slider: MMKSlider, didChange value: Float) {
+        print(value)
     }
-
 
 }
 
