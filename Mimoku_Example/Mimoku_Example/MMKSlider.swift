@@ -20,12 +20,16 @@ class MMKSlider: UIView {
     
     var value: Float = 0.5 {
         didSet {
-            updateProgress(with: value)
-            delegate?.slider(self, didChange: value)
+            if oldValue != value {
+                updateProgress(with: value)
+                delegate?.slider(self, didChange: value)
+            }
         }
     }
     
     var trackerLineHWidth: CGFloat = 4
+    
+    var thumbSize: CGSize = CGSize(width: 24, height: 24)
     
     var minTracker = UIImageView()
     var maxTracker = UIImageView()
@@ -59,8 +63,8 @@ class MMKSlider: UIView {
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
         
         updateLayouts()
     }
@@ -72,9 +76,13 @@ class MMKSlider: UIView {
         let currentValueRatio = (value - minValue) / (maxValue - minValue)
         minTracker.frame = CGRect(x: 0, y: (frame.height - trackerLineHWidth) / 2,
                                   width: CGFloat(currentValueRatio) * frame.width, height: trackerLineHWidth)
+        minTracker.layer.cornerRadius = trackerLineHWidth / 2
+        minTracker.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         maxTracker.frame = CGRect(x: CGFloat(currentValueRatio) * frame.width, y: (frame.height - trackerLineHWidth) / 2,
                                   width: CGFloat(1 - currentValueRatio) * frame.width, height: trackerLineHWidth)
-        thumb.frame.size = CGSize(width: 24, height: 24)
+        maxTracker.layer.cornerRadius = trackerLineHWidth / 2
+        maxTracker.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        thumb.frame.size = thumbSize
         thumb.center = CGPoint(x: CGFloat(currentValueRatio) * frame.width, y: frame.height / 2)
         thumb.layer.cornerRadius = 12
         thumb.layer.shadowColor = UIColor.black.cgColor
@@ -84,11 +92,24 @@ class MMKSlider: UIView {
     }
     
     private func updateProgress(with newValue: Float) {
+        let currentValueRatio = (newValue - minValue) / (maxValue - minValue)
         minTracker.frame = CGRect(x: 0, y: (frame.height - trackerLineHWidth) / 2,
-                                  width: CGFloat(newValue) * frame.width, height: trackerLineHWidth)
-        maxTracker.frame = CGRect(x: CGFloat(newValue) * frame.width, y: (frame.height - trackerLineHWidth) / 2,
-                                  width: CGFloat(1 - newValue) * frame.width, height: trackerLineHWidth)
-        thumb.center = CGPoint(x: CGFloat(newValue) * frame.width, y: frame.height / 2)
+                                  width: CGFloat(currentValueRatio) * frame.width, height: trackerLineHWidth)
+        maxTracker.frame = CGRect(x: CGFloat(currentValueRatio) * frame.width, y: (frame.height - trackerLineHWidth) / 2,
+                                  width: CGFloat(1 - currentValueRatio) * frame.width, height: trackerLineHWidth)
+        thumb.center = CGPoint(x: CGFloat(currentValueRatio) * frame.width, y: frame.height / 2)
+    }
+    
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        if super.point(inside: point, with: event) {
+            return true
+        } else if bounds.offsetBy(dx: -thumbSize.width / 2, dy: 0).contains(point) {
+            return true
+        } else if bounds.offsetBy(dx:  thumbSize.width / 2, dy: 0).contains(point) {
+            return true
+        } else {
+            return false
+        }
     }
     
     required init?(coder: NSCoder) {
