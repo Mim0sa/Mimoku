@@ -11,7 +11,7 @@ class MMKSwitch: UIControl {
     
     var normalColor: UIColor = .white
     
-    var highlightColor: UIColor = .systemOrange
+    var highlightColor: UIColor = .systemGreen
     var highlightImage: UIImage? = nil
     
     var thumbColor: UIColor = .white
@@ -26,18 +26,21 @@ class MMKSwitch: UIControl {
     }
     
     private let thumbSizeRatio: CGFloat = 0.82
+    private let contentSizeRatio: CGFloat = 0.96
     
     var thumb = UIImageView()
     var highlightView = UIImageView()
+    var contentView = UIView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         if frame.height > frame.width { fatalError() }
         
-        addSubview(highlightView)
+        addSubview(contentView)
+        contentView.addSubview(highlightView)
         highlightView.isUserInteractionEnabled = true
-        addSubview(thumb)
+        contentView.addSubview(thumb)
         thumb.isUserInteractionEnabled = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tap(g:)))
@@ -53,13 +56,17 @@ class MMKSwitch: UIControl {
         
         clipsToBounds = true
         layer.cornerRadius = frame.height / 2
-        layer.borderColor = UIColor(withHex: 0xbbbbbb).cgColor
-        layer.borderWidth = 2
         
-        highlightView.frame = bounds
+        backgroundColor = UIColor(withHex: 0xaaaaaa)
+        
+        contentView.clipsToBounds = true
+        contentView.frame = bounds.insetBy(dx: (1 - contentSizeRatio) / 2 * frame.width, dy: (1 - contentSizeRatio) / 2 * frame.width)
+        contentView.layer.cornerRadius = contentView.frame.height / 2
+        
+        highlightView.frame = contentView.bounds
         highlightView.backgroundColor = isOn ? highlightColor : normalColor
         if isOn { if highlightImage != nil { highlightView.image = highlightImage } }
-        thumb.frame.size = CGSize(width: frame.height * thumbSizeRatio, height: frame.height * thumbSizeRatio)
+        thumb.frame.size = CGSize(width: contentView.frame.height * thumbSizeRatio, height: contentView.frame.height * thumbSizeRatio)
         thumb.center = anchor(isOn)
         thumb.layer.cornerRadius = thumb.frame.size.width / 2
         thumb.backgroundColor = thumbColor
@@ -82,8 +89,8 @@ class MMKSwitch: UIControl {
     }
     
     private func anchor(_ isOn: Bool) -> CGPoint {
-        return isOn ? CGPoint(x: frame.width - (frame.height / 2) , y: frame.height / 2)
-                    : CGPoint(x: frame.height / 2 , y: frame.height / 2)
+        return isOn ? CGPoint(x: contentView.frame.width - (contentView.frame.height / 2) , y: contentView.frame.height / 2)
+        : CGPoint(x: contentView.frame.height / 2 , y: contentView.frame.height / 2)
     }
     
     required init?(coder: NSCoder) {
