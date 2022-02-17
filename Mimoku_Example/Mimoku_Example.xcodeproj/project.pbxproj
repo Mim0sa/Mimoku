@@ -19,6 +19,7 @@
 		8365983D259B2619005F9981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8365983B259B2619005F9981 /* Main.storyboard */; };
 		8365983F259B261A005F9981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8365983E259B261A005F9981 /* Assets.xcassets */; };
 		83659842259B261A005F9981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83659840259B261A005F9981 /* LaunchScreen.storyboard */; };
+		8379161427BE3B9200F61806 /* MMKSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379161327BE3B9200F61806 /* MMKSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8365983E259B261A005F9981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83659841259B261A005F9981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83659843259B261A005F9981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8379161327BE3B9200F61806 /* MMKSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMKSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				83659837259B2619005F9981 /* SceneDelegate.swift */,
 				83659839259B2619005F9981 /* ViewController.swift */,
 				1BACA4F627BBEA8800F404ED /* MMKSlider.swift */,
+				8379161327BE3B9200F61806 /* MMKSwitch.swift */,
 				8365983B259B2619005F9981 /* Main.storyboard */,
 				8365983E259B261A005F9981 /* Assets.xcassets */,
 				83659840259B261A005F9981 /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 				83659838259B2619005F9981 /* SceneDelegate.swift in Sources */,
 				1BACA4F727BBEA8800F404ED /* MMKSlider.swift in Sources */,
 				8358A39E2775C0A60039C22B /* Mimoku+UIColor.swift in Sources */,
+				8379161427BE3B9200F61806 /* MMKSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
