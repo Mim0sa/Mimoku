@@ -21,7 +21,9 @@ class ViewController: UIViewController, MMKSliderDelegate {
         let sw = MMKSwitch()
         sw.frame.size = CGSize(width: 130, height: 65)
         sw.center = view.center
-        view.addSubview(sw)
+//        view.addSubview(sw)
+        
+        
     }
     
     func slider(_ slider: MMKSlider, didChange value: Float) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BACA4F727BBEA8800F404ED /* MMKSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACA4F627BBEA8800F404ED /* MMKSlider.swift */; };
+		8340989227D1E36200C159C7 /* MMKToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8340989127D1E36200C159C7 /* MMKToast.swift */; };
 		8358A39C2775C0A60039C22B /* MMKFPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A3972775C0A60039C22B /* MMKFPSLabel.swift */; };
 		8358A39D2775C0A60039C22B /* Mimoku+CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A3982775C0A60039C22B /* Mimoku+CGRect.swift */; };
 		8358A39E2775C0A60039C22B /* Mimoku+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A3992775C0A60039C22B /* Mimoku+UIColor.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1BACA4F627BBEA8800F404ED /* MMKSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMKSlider.swift; sourceTree = "<group>"; };
+		8340989127D1E36200C159C7 /* MMKToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMKToast.swift; sourceTree = "<group>"; };
 		8358A3972775C0A60039C22B /* MMKFPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMKFPSLabel.swift; sourceTree = "<group>"; };
 		8358A3982775C0A60039C22B /* Mimoku+CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mimoku+CGRect.swift"; sourceTree = "<group>"; };
 		8358A3992775C0A60039C22B /* Mimoku+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mimoku+UIColor.swift"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				83659839259B2619005F9981 /* ViewController.swift */,
 				1BACA4F627BBEA8800F404ED /* MMKSlider.swift */,
 				8379161327BE3B9200F61806 /* MMKSwitch.swift */,
+				8340989127D1E36200C159C7 /* MMKToast.swift */,
 				8365983B259B2619005F9981 /* Main.storyboard */,
 				8365983E259B261A005F9981 /* Assets.xcassets */,
 				83659840259B261A005F9981 /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 				8358A39C2775C0A60039C22B /* MMKFPSLabel.swift in Sources */,
 				8358A3A02775C0A60039C22B /* Mimoku+UIImage.swift in Sources */,
 				83659838259B2619005F9981 /* SceneDelegate.swift in Sources */,
+				8340989227D1E36200C159C7 /* MMKToast.swift in Sources */,
 				1BACA4F727BBEA8800F404ED /* MMKSlider.swift in Sources */,
 				8358A39E2775C0A60039C22B /* Mimoku+UIColor.swift in Sources */,
 				8379161427BE3B9200F61806 /* MMKSwitch.swift in Sources */,
